@@ -5,16 +5,8 @@ import pickle
 import random
 from keras.preprocessing.text import Tokenizer
 
-'''
-we can get the following index file:
-1.tokenizer.pkl and word_index.pkl :encode file
-2.train_net_addraw.pkl:train数据集添加了raw数据
-3.train_net_data.pkl：train数据集没有添加raw数据,用于消歧
-4.subject_data.pkl：根据kb_data构建的“kb_id->data”索引字典
-5.stockname_data.pkl：根据kb_data构建的"'实体'->data”索引字典
-'''
 
-train_net_addraw_is_exist = os.path.exists('./data_deal/train_net_addraw.pkl')  # 训练集，增加了raw数据
+train_net_addraw_is_exist = os.path.exists('./data_deal/train_net_addraw.pkl')  # 为训练集添加了网络数据
 train_net_is_exist = os.path.exists('./data_deal/train_net_data.pkl')  # 训练集
 
 count = 0
